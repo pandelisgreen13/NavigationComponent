@@ -27,13 +27,18 @@ class DashboardFragment : Fragment() {
 
     private fun initUI() {
         details.setOnClickListener {
-            findNavController().navigate(  DashboardFragmentDirections.actionDashboard2ToDetails())
+            findNavController().navigate(DashboardFragmentDirections.actionDashboard2ToDetails())
         }
         settings.setOnClickListener {
-            findNavController().navigate(  DashboardFragmentDirections.actionDashboard2ToSettings())
+            findNavController().navigate(DashboardFragmentDirections.actionDashboard2ToSettings())
         }
         map.setOnClickListener {
-            findNavController().navigate(  DashboardFragmentDirections.actionDashboard2ToMap())
+            findNavController().navigate(DashboardFragmentDirections.actionDashboard2ToMap())
+        }
+        register.setOnClickListener {
+            val username = username.text.toString()
+            val action = DashboardFragmentDirections.actionDashboard2ToRegisterGraph(username)
+            findNavController().navigate(action)
         }
     }
 }

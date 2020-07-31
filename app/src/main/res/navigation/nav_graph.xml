@@ -18,6 +18,17 @@
         <action
             android:id="@+id/action_dashboard2_to_settings"
             app:destination="@id/settings" />
+        <action
+            android:id="@+id/action_dashboard2_to_register_graph"
+            app:destination="@id/register_graph"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popUpTo="@id/dashboard2" >
+            <argument
+                android:name="username"
+                app:argType="string"
+                android:defaultValue="" />
+        </action>
     </fragment>
     <fragment
         android:id="@+id/details"
@@ -38,4 +49,5 @@
         android:name="com.pchasapis.navigationcomponet.fragment.MapFragment"
         android:label="fragment_map"
         tools:layout="@layout/fragment_map" />
+    <include app:graph="@navigation/register_graph" />
 </navigation>

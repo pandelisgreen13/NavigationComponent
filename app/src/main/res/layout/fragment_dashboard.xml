@@ -37,4 +37,22 @@
         android:layout_centerHorizontal="true"
         android:text="Settings" />
 
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/register"
+        android:layout_centerHorizontal="true"
+        android:hint="USername"
+        android:textColor="@android:color/black" />
+
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/settings"
+        android:layout_centerHorizontal="true"
+        android:text="register" />
+
 </RelativeLayout>
